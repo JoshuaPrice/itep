@@ -12,7 +12,7 @@ import conversions as cnvr
 # Format pre-determined top TF into df
 topTfNames = ['CTCF', 'YY1', 'NSD2', 'WDR5', 'SUZ12', 'RAD21', 'POLR2A', 'MXI1', \
 'MAZ', 'JUN', 'GATA2', 'FOXM1', 'FOS', 'CREBBP', 'CHD7', 'CHD4', 'CEBPB', 
-'H2AZ', 'SOX2', 'KLF4', 'POU5F1', 'MYC', 'ESRRB', 'FOXA2']
+'H2AFZ', 'SOX2', 'KLF4', 'POU5F1', 'MYC', 'ESRRB', 'FOXA2']
 topTfDf = pd.DataFrame(data={'Names':topTfNames})
 
 # Create Ensembl Gene ID row; cr = conversion ratio (not used)

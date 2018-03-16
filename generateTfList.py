@@ -21,6 +21,13 @@ tfListLoc = '/home/josh/mlep/data/allTF.xlsx'
 tfListDf = pd.read_excel(tfListLoc)
 tfListDf = tfListDf.drop([u'Name', u'Species', u'Type'], axis=1)
 del tfListDf[u'# PPI\xa0'] # had difficulty using drop method on this name
+
+# Append additional proteins of interest to TF list (such as Polr2a)
+otherProteinsLoc = '/home/josh/mlep/data/moreProteinsInterest.xlsx'
+otherProteinsDf = pd.read_excel(otherProteinsLoc)
+tfListDf = tfListDf.append(otherProteinsDf, ignore_index=True)
+
+# Make sure gene name/acronyms all in upper format
 tfListDf['Symbol'] = tfListDf['Symbol'].str.upper()
 
 # Import RNA-seq data, obtained from Claudia
