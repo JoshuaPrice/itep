@@ -17,13 +17,13 @@ import conversions as cnvr
 
 # Full TF list from TcoF-DB v2: http://tools.sschmeier.com/tcof/home/
 # Import TF list and format df
-tfListLoc = '/home/josh/mlep/data/allTF.xlsx'
+tfListLoc = '/data2/josh/allTF.xlsx'
 tfListDf = pd.read_excel(tfListLoc)
 tfListDf = tfListDf.drop([u'Name', u'Species', u'Type'], axis=1)
 del tfListDf[u'# PPI\xa0'] # had difficulty using drop method on this name
 
 # Append additional proteins of interest to TF list (such as Polr2a)
-otherProteinsLoc = '/home/josh/mlep/data/moreProteinsInterest.xlsx'
+otherProteinsLoc = '/data2/josh/moreProteinsInterest.xlsx'
 otherProteinsDf = pd.read_excel(otherProteinsLoc)
 tfListDf = tfListDf.append(otherProteinsDf, ignore_index=True)
 
@@ -31,7 +31,7 @@ tfListDf = tfListDf.append(otherProteinsDf, ignore_index=True)
 tfListDf['Symbol'] = tfListDf['Symbol'].str.upper()
 
 # Import RNA-seq data, obtained from Claudia
-rnaSeqLoc = '/home/josh/mlep/data/mES_RNAseq.xlsx'
+rnaSeqLoc = '/data2/josh/mES_RNAseq.xlsx'
 rnaSeqDf = pd.read_excel(rnaSeqLoc, 0)
 
 # Add Ensembl ID to tfListDf
@@ -69,4 +69,4 @@ sortedTfDf.reset_index(drop=True, inplace=True)
 sortedTfDf.index.name = "Rank0"
 
 # Save to sortedTf.csv
-sortedTfDf.to_csv('data/sortedTf.csv', index=True, header=True)
+sortedTfDf.to_csv('/data2/sortedTf.csv', index=True, header=True)

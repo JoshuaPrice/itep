@@ -19,7 +19,7 @@ topTfDf = pd.DataFrame(data={'Names':topTfNames})
 topTfDf["EnsemblGeneId"], cr = cnvr.convertGeneName(topTfDf, "Name", "Ensembl")
 
 # Add columns to df to store RTCC Values and Rank
-sortedTfLoc = '/home/josh/mlep/data/sortedTf.csv'
+sortedTfLoc = '/data2/josh/sortedTf.csv'
 dfSortedTf = pd.read_csv(sortedTfLoc)
 topTfDf["RTCC"] = ""
 topTfDf["Rank"] = ""

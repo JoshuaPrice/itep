@@ -29,7 +29,7 @@ def convertGeneName(names, currentFormat="NCBI", returnFormat="Ensembl"):
 	assert (returnFormat == "ENSEMBL"),"Invalid desired format: only Ensembl supported"
 
 	# Import conversions file, originally downloaded from Ensembl
-	tfConversionsLoc = '/home/josh/mlep/data/tfConversions.csv'
+	tfConversionsLoc = '/data2/josh/tfConversions.csv'
 	dfConversions = pd.read_csv(tfConversionsLoc)
 
 	# If NCBI format provided and ENSEMBL desired, make that conversion
@@ -84,7 +84,7 @@ def ncbiObject():
 	return ncbiDf
 
 def namesObject():
-	geneNames = ['Sox2', 'Klf4', 'Pou5f1']
+	geneNames = ['SOX2', 'KLF4', 'POU5F1']
 	geneNameDf = pd.DataFrame(data={'Name':geneNames})
 	return geneNameDf
 
