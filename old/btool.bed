@@ -1,0 +1,7 @@
+chr4	148989110	148989309	feature_type=CTCF	Binding	S
+chr4	148983509	148983909	feature_type=Enhancer
+chr4	148980911	148982108	feature_type=Promoter	Flanking	R
+chr4	148985732	148986131	feature_type=Open	chromatin
+chr4	148979510	148980509	feature_type=Enhancer
+chr4	148985510	148986509	feature_type=CTCF	Binding	S
+chr4	148985734	148986129	feature_type=Promoter	Flanking	R
