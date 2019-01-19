@@ -5,3 +5,8 @@ This repo contains the code for my (Joshua Price) honors thesis in Molecular and
 This is the poster I presented at UC Berkeley on November 30, 2018.
 ![Alt text](poster.jpg?raw=true "ITEP Poster")
 
+## Workflow outline
+The data processing procedure is shown graphically in the poster above and described in depth in my [thesis paper](thesis.pdf). For those interested in reading and replicating the code driving this project, I will summarize the purpose and approach of various files in this repo here. That being said, this project was not designed to be a ready-to-go library for other research groups and many files remain as iPython development notebooks. If your group is interested in replicating or expanding on this work, please reach out to me directly at jprice@berkeley.edu so I can asssit you in converting files as needed for your purposes.
+
+### Step 1: ChIP-seq analysis
+
