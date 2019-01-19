@@ -1,12 +1,12 @@
 #!/bin/bash
-########################
-#
-# Chip-Seq Peak Calling Script
+
+# File name: chipseqrun.sh
 # Written by: Joshua Price, jprice@berkeley.edu
 # Initiated on: 8/26/18
 # Last edited: 1/18/19
-#
-########################
+
+# Purpose: Call peaks for ChIP seq data given .fastq files with raw ChIP and control reads. Example given with Rad21.
+#				After this script, need to lift over from mm8/mm9 to mm10 after conversion for genome-wide comparison.
 
 # Make new directory for the files relevant to this TF/HisMod
 DIR=/data2/josh/chipseq/Rad21
