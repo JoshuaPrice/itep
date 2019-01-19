@@ -1,22 +1,22 @@
 #!/bin/bash
 ########################
 #
-# Chip-Seq Script
+# Chip-Seq Peak Calling Script
 # Written by: Joshua Price, jprice@berkeley.edu
-# Initiated on: 10/16/18
-# Last edited: 11/27/18
+# Initiated on: 8/26/18
+# Last edited: 1/18/19
 #
 ########################
 
 # Make new directory for the files relevant to this TF/HisMod
-DIR=/data2/josh/chipseq/YYZ
+DIR=/data2/josh/chipseq/Rad21
 mkdir $DIR
 
 # URLs where file to download is located
-URL_EXP=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR341/SRR341113/SRR341113.fastq.gz
+URL_EXP=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR331/009/SRR3313239/SRR3313239.fastq.gz
 
 # URL for control
-URL_CONTROL=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR341/SRR341114/SRR341114.fastq.gz
+URL_CONTROL=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR331/000/SRR3313240/SRR3313240.fastq.gz
 
 # Download files into /data2
 wget -O exp_raw.fastq.gz $URL_EXP

@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# File name: forChipWei.sh
+# Author: Joshua Price
+# Date created: 09/21/2018
+# Date last modified: 01/18/2019
+# Python Version: 2.7
+
+# Purpose: Call peaks on the reads obtained from the Wei lab (Sox2, Klf4, Oct4, Nanog, c-Myc, Esrrb, CTCF, Suz12).
+#				Lifted over from mm8 to mm10 after conversion for genome-wide comparison.
+#				Data source: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE11431
+
 ## Establish Wei Control
 DIR_CONTROL=/data2/josh/chipseq/controlWei
 URL_CONTROL=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR001/SRR001996/SRR001996.fastq.gz

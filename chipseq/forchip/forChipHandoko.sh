@@ -1,16 +1,26 @@
 #!/bin/bash
 
+# File name: forChipHandoko.sh
+# Author: Joshua Price
+# Date created: 09/29/2018
+# Date last modified: 01/18/2019
+# Python Version: 2.7
+
+# Purpose: Call peaks on the three reads obtained from the Handoko lab (CTCF, Pol II, and p300).
+#				Lifted over from mm8 to mm10 after conversion for genome-wide comparison.
+#				Data source: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE28247
+
 ## Establish Handoko Control
 DIR_CONTROL=/data2/josh/chipseq/controlHandoko
-# URL_CONTROL=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR172/SRR172859/SRR172859.fastq.gz
-# mkdir $DIR_CONTROL
-# wget -O control_raw.fastq.gz $URL_CONTROL
-# mv control_raw.fastq.gz $DIR_CONTROL
-# gunzip $DIR_CONTROL/control_raw.fastq.gz
-# bowtie /data2/josh/genome/mm8_index -q $DIR_CONTROL/control_raw.fastq  -v 2 -m 1 -3 1 -S 2> $DIR_CONTROL/control_mapped.out > $DIR_CONTROL/control_mapped.sam
-# sudo mv macs14_MACS_bedGraph/control/macs14_control_afterfiting_all.bdg.gz $DIR_CONTROL
-# sudo mv macs14* $DIR
-# sudo rm -r macs14_MACS_bedGraph
+URL_CONTROL=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR172/SRR172859/SRR172859.fastq.gz
+mkdir $DIR_CONTROL
+wget -O control_raw.fastq.gz $URL_CONTROL
+mv control_raw.fastq.gz $DIR_CONTROL
+gunzip $DIR_CONTROL/control_raw.fastq.gz
+bowtie /data2/josh/genome/mm8_index -q $DIR_CONTROL/control_raw.fastq  -v 2 -m 1 -3 1 -S 2> $DIR_CONTROL/control_mapped.out > $DIR_CONTROL/control_mapped.sam
+sudo mv macs14_MACS_bedGraph/control/macs14_control_afterfiting_all.bdg.gz $DIR_CONTROL
+sudo mv macs14* $DIR
+sudo rm -r macs14_MACS_bedGraph
 
 # Define arrays for links and final directory names
 declare -a linksArray=("ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR172/SRR172853/SRR172853.fastq.gz"
