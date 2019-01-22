@@ -14,9 +14,10 @@ See the bash script [chipseqrun.sh](chipseq/chipseqrun.sh). This file begins wit
 Separate files for ChIP-seq experiments that shared a single control are included in the [forchip](chipseq/forchip) directory. Each of these follows the same procedure as in the single experiment approach, but handles multiple experiments by loops through each of the experiments individually.
 
 ### Step 2: Establishing an enhancer-promoter interaction (EPI) set for the analysis
-
+I took several different approaches to establishing a meaningful EPI set; the two-fold approach I used in the end took the intersection of a known set of EPIs in mESC cells and the set of contacts seen to be interacting in the micro-C data. This is done across multiple files (requiring many data format conversions due to the several data sources) with the final intersection taking place in [epPairixAll](freq/epPairixAll.ipynb). The file containing the set of EPIs was saved as activePairixAll.csv. A summary of the characteristics of the EPI set used for analysis is included on page 19 of my [thesis paper](thesis.pdf). 
 
 ### Step 3: Calculating enrichment frequencies of EPIs in the set for transcription factors and histone modifications of interest
+The EPI set (containing enhancer and promoter loci) and ChIP-seq sets (containing enrichment loci) were compared to determine the frequency of enhancers and promoters were enriched for each factor or modification. 
 
---
+### Further Reading
 This summarizes a year's worth of work, so there is naturally much more contained in this repo as well as approaches that were less successful. If you would like to learn more about the project, please refer to my [thesis paper](thesis.pdf) and/or contact me at jprice@berkeley.edu.
